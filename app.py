@@ -28,7 +28,7 @@ def index():
         leve = 'Deus'
     else:
         level = 'Fácil'
-    print(f'Nivel: {level}\nNumero: {session['number']}')
+    
     return render_template('index.html', level=level, message='Teste a sua sorte.', attempts=session.get('attempts', 5), difficulty=session.get('difficulty', 5))
 
 @app.route('/guess', methods=['POST'])
@@ -70,7 +70,7 @@ def guess():
             message = "O número é menor."
             number += 1
         session['number'] = number  # Atualiza o número na sessão
-        print(f'Nivel: {level}\nNumero: {session['number']}')
+       
         return render_template('index.html', level=level, message=message, attempts=session.get('attempts', 5), difficulty=session.get('difficulty', 5))
 
 @app.route('/win')
