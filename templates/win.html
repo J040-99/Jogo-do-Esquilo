@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parabéns!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class='container'>
+        <div class="header">
+            <h1>{{ message }}</h1> 
+            <img src="{{ url_for('static', filename='images/Esquilo.png') }}" alt="Imagem">
+        </div>
+        <form action="/" method="get">
+            <button type="submit">Poximo nivel</button>
+        </form>
+    </div>
+</body>
+</html>

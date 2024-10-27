@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhe o número!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script>
+        // Permite apenas a digitação de números
+        function allowOnlyNumbers(e) {
+            var charCode = (e.which) ? e.which : e.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                e.preventDefault();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class='container'>
+        <div class="header">
+            <h1>Tente adivinhar o número do copo que o esquilo está escondido!</h1>
+            <img src="{{ url_for('static', filename='images/Esquilo.png') }}" alt="Imagem">
+        </div>
+        <p>Dificuldade: {{ level }} ({{ difficulty }} copos)</p>
+        <p>Tentativas: {{ attempts }}</p>
+        <p>{{ message }}</p>
+        <form method="POST" action="/guess">
+            <input type="text" name="guess" autofocus onkeypress="allowOnlyNumbers(event)">
+            <button type="submit" >Ok</button>
+        </form>
+    </div>
+</body>
+</html>
