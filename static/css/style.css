@@ -5,7 +5,7 @@ body {
 
 h1, h2 {
     color: #000000;
-    font-size: 23px;
+    font-size: 140%;
     margin-top: 0px;
     margin-bottom: 10px;
 }
@@ -17,12 +17,12 @@ p {
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 50rem;
+    margin: auto;
     padding: 20px;
     background-color: rgb(230, 128, 11);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgb(0,0,0,0.1);
 }
 
 .header {
