@@ -1,23 +1,23 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #000000;
+    margin: 0;
+    padding: 0;
 }
 
 h1, h2 {
     color: #000000;
-    font-size: 140%;
-    margin-top: 0px;
-    margin-bottom: 10px;
+    font-size: 1.4em;
+    margin: 0 0 10px 0;
 }
 
 p {
-    line-height: 0.2; 
-    margin-top: 0px;
-    margin-bottom: 20px;
+    line-height: 1.4;
+    margin: 0 0 20px 0;
 }
 
 .container {
-    max-width: 720px;
+    max-width: 60%;
     margin: auto;
     padding: 20px;
     background-color: rgb(230, 128, 11);
@@ -32,35 +32,56 @@ p {
 }
 
 .header img {
-    margin-left: 5px; /* Espaçamento entre a imagem e o título */
-    width: 80px; /* Ajusta a largura da imagem conforme necessário */
-    height: 80px; /* Ajusta a altura da imagem conforme necessário */
+    margin-left: 5px;
+    width: 60px; /* Ajustado para mobile */
+    height: 60px; /* Ajustado para mobile */
 }
 
 button {
-    background-color: #4CAF50; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    padding: 5px 12px; /* Espaçamento interno */
-    border: none; /* Sem bordas */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de mãozinha */
+    background-color: #000000;
+    color: white;
+    padding: 5px 15px; /* Ajustado para mobile */
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049; /* Cor do fundo quando o mouse estiver em cima */
+    background-color: #d88d03;
 }
 
 input[type="text"] {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    margin: 8px 0; /* Margem */
-    display: inline-block; /* Exibição */
-    border: 0.1px solid rgb(255, 255, 255); /* Bordas */
-    border-radius: 4px; /* Bordas arredondadas */
-    box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 input[type="text"]:focus {
-    border: 0.1px solid rgb(255, 255, 255); /* Bordas */
-    outline: none; /* Remove a marca azul */
+    border: 1px solid rgb(255, 255, 255);
+    outline: none;
+}
+
+/* Media query para telas pequenas */
+@media (max-width: 500px) {
+    .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    h1, h2 {
+        font-size: 1.2em;
+    }
+
+    button {
+        padding: 5px 15px;
+    }
+
+    .header img {
+        width: 50px;
+        height: 50px;
+    }
 }
